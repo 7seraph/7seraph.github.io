@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSE170 Search Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Search</title>
+    <style>
+      header {
+            background-color: #5448C8;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1em;
+        }
+        .available {
+          background-color:#31D843;
+        }
+        .unavailable {
+          background-color:#C0BABC;
+        }
+      h2 {
+        font-size:16px;
+        font-weight:bold;
+      }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2em;
+        }
+
+        .product1 {
+            background-color: #FFFFFF;
+            border: 1px solid #ddd;
+            margin: 1em;
+            padding: 1em;
+            text-align: center;
+            width: 300px;
+        }
+      .product2 {
+            background-color: #FFFFFF;
+            border: 1px solid #ddd;
+            margin: 1em;
+            padding: 1em;
+            text-align: center;
+            width: 300px;
+        opacity:0.7;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+          background-color: #04AA6D;
+          border:none;
+          border-radius: 5px;
+          padding:5px;
+          margin-right:15px;
+          color:#FFFFFF;
+          transition-duration: 0.4s;
+          
+        }
+        .no-click {
+          cursor: not-allowed;
+          background-color:#C0BABC;
+        }
+      .no-click:hover {
+        
+      }
+        #search-container {
+            text-align: center;
+            margin: 1em;
+        }
+
+        #search-input {
+            padding: 0.3em;
+            width: 60%;
+          height:80%;
+          background-color:#FFFFFF;
+        }
+
+        #search-button {
+            padding: 0.5em 1em;
+            background-color:#3C3C43;
+        }
+        button:hover {
+            background-color:#FFC120;
+            border-color:#04AA6D;
+            
+        }        
+
+        .view-details-button:hover {
+            display:block;
+            margin-top:1em;
+            padding: 0.5em 1em;
+            color: #FFFFFF;
+            text-decoration:none;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+            background-color:#3C3C43;
+        }
+        #notification {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+            z-index: 1;
+        }
+        #bottom-nav {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #bottom-nav a {
+            flex: 1;
+            float: left;
+            display: block;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        #bottom-nav a:hover {
+            background-color: #5448C8;
+            color: #FFFFFF;
+        }
+
+        #bottom-nav a.active {
+            background-color: #04AA6D;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search for products...">
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+
+    <section>
+      <div class="row">
+        <div class="col s12 m6 l3">
+          <div class="product1">
+            <img src="https://images.albertsons-media.com/is/image/ABS/970019244-ECOM?$ng-ecom-pdp-mobile$&defaultImage=Not_Available" alt="Halos Mandarins Clementine - 5 Lb">
+          <p class="available">In stock</p>
+            <h2>Halos Mandarins Clementine - 5 Lb</h2>
+            
+            <p>Price: $8.99 / ea</p>
+            <button onclick="addToCart('Halos Mandarins Clementine - 5 Lb')">Add to Cart</button>
+            <a href="product1-details.html" class="view-details-button">View Details</a>
+        </div>
+        </div>
+      </div>
+        
+        <div class="row">
+          <div class="col s12 m6 l3">
+            <div class="product2">
+            <img src="https://images.albertsons-media.com/is/image/ABS/970480596-ECOM?$ng-ecom-pdp-mobile$&defaultImage=Not_Available" alt="O Organics California Mandarins In Bag - 2 Lb">
+            <h2>O Organics California Mandarins - 2 Lb</h2>
+            <p class="unavailable">Unavailable</p>
+            <p>Price: $5.99 / ea</p>
+            <button class="no-click">Add to Cart</button>
+            <a  class="view-details-button">View Details</a>
+        </div>
+          </div>
+      </div>
+        
+
+        <!-- Add more product divs as needed -->
+
+    </section>
+
+    <div id="bottom-nav">
+        <a href="./cse170homeproj.html">Home</a>
+        <a href="#search-button">Search</a>
+        <a href="#cart">Cart</a>
+        <a href="#map">Map</a>
+        <a href="#settings">Settings</a>
+    </div>
+
+    <!-- Notification container -->
+    <div id="notification"></div>
+
+    <script>
+        function addToCart(productName) {
+            showNotification(productName + ' added to cart');
+        }
+
+
+        function showNotification(message) {
+            var notification = document.getElementById('notification');
+            notification.innerHTML = message;
+
+            // Show the notification
+            notification.style.display = 'block';
+
+            // Hide the notification after 3 seconds
+            setTimeout(function () {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
