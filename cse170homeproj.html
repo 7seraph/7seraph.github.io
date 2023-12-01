@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSE170 Home Page</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>Home</title>
+    <style>
+        /* ... (previous styles) ... */
+      
+        header {
+            background-color: #5448C8;
+            color: white;
+            text-align: center;
+            padding: 0.2em;
+        }
+      h2 {
+        font-size:16px;
+      }
+      .available {
+          background-color:#31D843;
+        }
+        .sub-header {
+            text-align: center;
+            font-size: 1.6em;
+            margin: 0.5em 0;
+            font-weight:20px;
+          background-color:#FFFECB;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2em;
+        }
+
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 1em;
+            padding: 1em;
+            text-align: center;
+            width: 300px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+
+        
+
+        #notification {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em;
+            z-index: 1;
+        }
+
+        #bottom-nav {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #bottom-nav a {
+            flex: 1;
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 12px 14px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        #bottom-nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #bottom-nav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="home">SnapBasket</h1>
+    </header>
+
+    <section>
+      <div class="row">
+        <div class="col s12 m6 l3">
+        <div class="sub-header">Deals</div>
+        <!-- Products under "Deals" -->
+        <div class="product">
+            <img src="https://images.albertsons-media.com/is/image/ABS/119020096-ECOM?$ng-ecom-pdp-mobile$&defaultImage=Not_Available" alt="Nestle Hot Cocoa Mix Rich Milk Chocolate Flavor - 27.7 Oz">
+          <p class="available">In stock</p>
+            <h2>Nestle Hot Cocoa Mix Rich Milk Chocolate Flavor - 27.7 Oz</h2>
+            <p>Price: $7.49 / ea</p>
+
+        </div>
+        </div>
+      </div>
+      
+      
+
+        <!-- Add more products under "Deals" -->
+         <div class="row">
+           <div class="col s12 m6 l3">
+             <div class="sub-header">Best Selling</div>
+
+        <!-- Products under "Best Selling" -->
+        <div class="product">
+            <img src="https://images.albertsons-media.com/is/image/ABS/960565886-ECOM?$ng-ecom-pdp-mobile$&defaultImage=Not_Available" alt="Starbucks Frappuccino Peppermint Mocha Glass Nr Bottle - 13.7 Fl. Oz">
+          <p class="available">In stock</p>
+            <h2>Starbucks Frappuccino Peppermint Mocha Glass Nr Bottle - 13.7 Fl. Oz.</h2>
+            <p>Price: $3.99 / ea</p>
+
+        </div>
+           </div>
+      </div>
+        
+
+        <!-- Add more products under "Best Selling" -->
+    </section>
+
+    <div id="bottom-nav">
+        <a href="#home">Home</a>
+        <a href="#search">Search</a>
+        <a href="#cart">Cart</a>
+        <a href="#map">Map</a>
+        <a href="#settings">Settings</a>
+    </div>
+
+    <!-- Notification container -->
+    <div id="notification"></div>
+
+    <script>
+
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
