@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CSE170 View Details Halos Page</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>Product Details</title>
+    <style>
+        header {
+            background-color: #5448C8;
+            color: white;
+            text-align: center;
+            padding: 0.2em;
+            font-size:1.6em;
+        }
+      a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+        h2 {
+          text-align:left;
+          font-size:1em;
+        }
+        h3 {
+          text-align:left;
+          font-size:1em;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 50px; /* Adjust according to your header height */
+        }
+        .details {
+          font-size:14px;
+          font-weight:normal;
+        }
+        p {
+          text-align:left;
+          font-size:1.1em;
+          font-weight:600;
+        }
+        .price {
+          color: red;
+          font-weight:bold;
+        }
+        .product-details-container {
+            text-align: center;
+            padding: 2em;
+        }
+
+        .product-details {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 1em;
+            padding: 1em;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        #bottom-nav {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #bottom-nav a {
+            flex: 1;
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        #bottom-nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #bottom-nav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        SnapBasket
+    </header>
+  <a href="./cse170searchpage.html" class="previous">&laquo; Back</a>
+
+    <div class="product-details-container">
+        <div class="product-details">
+            <img src="https://images.albertsons-media.com/is/image/ABS/970019244-ECOM?$ng-ecom-pdp-mobile$&defaultImage=Not_Available" alt="Product 1">
+          <p style="background-color:#31D843">In-stock</p>
+          <p>Halos Mandarins Clementine - 5 Lb<br>
+            <span class="price">$8.99 / ea</span></p>
+          <br>
+          <p>Details<br> 
+            <span class="details">Pure goodness. Sweet. Seedless. Easy peel. Coated with vegetable-and/or lac-resin based waxed.</span></p>
+            
+          
+        </div>
+    </div>
+
+    <div id="bottom-nav">
+        <a href="#home">Home</a>
+        <a href="#search">Search</a>
+        <a href="#cart">Cart</a>
+        <a href="#map">Map</a>
+        <a href="#settings">Settings</a>
+    </div>
+
+    <!-- Notification container -->
+    <div id="notification"></div>
+
+    <script>
+        // Reuse the addToCart and showNotification functions
+        
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
