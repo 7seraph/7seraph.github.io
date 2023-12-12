@@ -98,6 +98,10 @@
           height:80%;
           background-color:#FFFFFF;
         }
+      #searchnav {
+        background-color:#f1f1f1;
+        color:#000000;
+      }
 
         #search-button {
             padding: 0.5em 1em;
@@ -136,22 +140,13 @@
             flex: 1;
             float: left;
             display: block;
-            color: #FFFFFF;
             text-align: center;
             padding: 10px 12px;
             text-decoration: none;
             font-size: 16px;
         }
 
-        #bottom-nav a:hover {
-            background-color: #5448C8;
-            color: #FFFFFF;
-        }
-
-        #bottom-nav a.active {
-            background-color: #04AA6D;
-            color: #FFFFFF;
-        }
+        
     </style>
 </head>
 <body>
@@ -199,7 +194,7 @@
 
     <div id="bottom-nav">
         <a href="./cse170homeproj.html">Home</a>
-        <a href="#search-button">Search</a>
+        <a href="#search-button" id="searchnav">Search</a>
         <a href="#cart">Cart</a>
         <a href="#map">Map</a>
         <a href="#settings">Settings</a>
