@@ -29,6 +29,13 @@
 body {
   font-family: "Fira Sans", Verdana;
 }
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 7%;
+  padding: 12px;
+}
 mark {
   background-color: #6495ED;
   color: black;
