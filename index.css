@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #04AA6D;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #04AA6D;
+}
+
+.navbar .links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .links a:hover {
+    color: #04AA6D;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.hero img {
+    width: 100px;
+    margin-bottom: 1em;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+.container h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li {
+    margin-bottom: 1em;
+}
+
+.container ul li ul {
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+    margin-top: 2em;
+}
